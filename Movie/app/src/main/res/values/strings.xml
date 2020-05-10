@@ -1,0 +1,18 @@
+<resources>
+    // tittle for the mainActivity
+    <string name="app_name">Movie</string>
+    // tittle for the detail activity
+    <string name="detail_activity">DETAIL ACTIVITY</string>
+    // text for title
+    <string name="Text_for_tittle">BAD BOYS FOR LIFE</string>
+    // text for release date
+    <string name="Text_for_release_date">DECEMBER 2020</string>
+    // text for  vote average
+    <string name="Text_for_vote">7/10</string>
+    // text for description
+    <string name="Text_for_synopsis">SYNOPSIS</string>
+    // Error message
+    <string name="Error_text_message">NO INTERNET CONNECTION TRY LATER</string>
+// text for the favorite button
+    <string name="favorite_text_message"> ADD FAVORITE </string>
+</resources>

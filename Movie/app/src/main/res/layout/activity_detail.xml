@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".DetailActivity">
+
+    <LinearLayout
+        android:id="@+id/good"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/Text_for_tittle"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/release_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/Text_for_release_date"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/user_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/Text_for_vote"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/favo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/favorite_text_message"
+        android:textStyle="bold"
+        android:layout_below="@id/good" />
+
+    <ToggleButton
+        android:id="@+id/favorite_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to favorites"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/favo_text" />
+
+    <TextView
+        android:id="@+id/synopsis_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/favorite_button"
+        android:paddingTop="10dp"
+        android:paddingLeft="5dp"
+        android:text="@string/Text_for_synopsis"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/synopsis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/synopsis_text"
+        android:paddingTop="10dp"
+        android:paddingLeft="5dp"
+        android:text="this is the the third movie for the black and white men of the movie"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/trailer_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_below="@id/synopsis"
+        android:text="Trailers:"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:id="@+id/frame_id"
+        android:layout_below="@id/trailer_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/trailer_recycle_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_below="@id/trailer_id" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/review_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_below="@id/frame_id"
+        android:text="Reviews:"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/review_id">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/review_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp" />
+    </FrameLayout>
+</RelativeLayout>
